@@ -1,0 +1,11 @@
+name = "translator-eta"
+compatibility_date = "2025-10-03"
+pages_build_output_dir = "./public"
+
+[[kv_namespaces]]
+binding = "GEMINI_KV"
+id = "95e9bc22a0c54ae987047f8f83a0b9b4"
+
+[[kv_namespaces]]
+binding = "USERS_KV"
+id = "50cce59be2024abe913e950a9793efd9"
