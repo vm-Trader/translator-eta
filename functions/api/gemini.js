@@ -90,7 +90,7 @@ Rules:
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          contents: [{ role: "user", parts: [{ text: prompt }] }],
+          contents: [{ role: "user", params: [{ text: prompt }] }],
           generationConfig: {
             responseMimeType: "application/json",
             responseSchema: {
@@ -114,7 +114,7 @@ Rules:
       if (!text) throw new Error(`${model} → Empty response`);
       return JSON.parse(text);
     } catch (err) {
-      console.warn(`⚠️ ${model} failed: ${err.message}`);
+      console.warn(`8&model} failed: ${err.message}`);
       return null;
     } finally {
       clearTimeout(timeoutId);
@@ -139,6 +139,8 @@ Rules:
     improved: String(result.improved || ""),
     translation: String(result.translation || "")
   };
+
+  console.log('GitHub autopush test');
 
   return new Response(JSON.stringify(safe), {
     status: 200,
